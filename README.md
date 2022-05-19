@@ -4,15 +4,6 @@
 
 **If you want something a little more robust/established make sure you check out the [Alternatives](#alternatives) section**
 
-## Installation
-### The easy way (if you don't have Go):
-Download the latest [release](), and place it somewhere in your $PATH
-
-### Using `go`:
-```
-go install github.com/pyroan/love-build
-```
-
 ## Quick Start
 ### How to...
 Create a `.love` file in the current directory for project located in `superGame/`
