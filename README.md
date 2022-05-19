@@ -1,3 +1,4 @@
+![](https://shields.io/github/license/pyroan/love-build)
 # `love-build`: Fast, Easy CLI build tool for [LÖVE](https://love2d.org)
 
 **This is still *very* early in dev and is missing a lot of features. It's also a personal tool I use to build my own projects as-needed, so I can't guarantee it's being actively developed at any given time.**
