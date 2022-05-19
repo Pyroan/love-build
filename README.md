@@ -22,9 +22,9 @@ Generate a build for the Web using [love.js](https://github.com/Davidobot/love.j
 ```
 $ love-build -b superGame
 ```
-Generate a build for Windows, put it in a separate build directory, give the build a different name, specify the version number, AND delete the `.love` file when done.
+Generate builds for Windows and Web, put them in a separate build directory, give the build a different name, specify the version number, AND delete the `.love` file when done.
 ```
-$ love-build -w -d superGame-builds -o ReallyCoolGame --version=0.1.3 --clean superGame
+$ love-build -w -b -d superGame-builds -o ReallyCoolGame --version=0.1.3 --clean superGame
 ```
 Create a `.love` file and then immediately delete it for some reason?
 ```
@@ -34,7 +34,7 @@ $ love-build --clean superGame
 ## Build Target support
 - Windows (64-bit)
 - Web (via [love.js](https://github.com/Davidobot/love.js))
-    - Runs in compatibility mode by defaul
+    - Runs in compatibility mode by default
 
 ## LÖVE Version Support
 - 11.3
