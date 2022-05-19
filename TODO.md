@@ -1,9 +1,8 @@
 # TODO
 - Build Targets
-    - Web
+    - Win32 (if it doesn't work by default)
     - Mac
     - Linux
-    - Win32 (if it doesn't work by default)
     - iOS/Android?
 - Test with LÖVE 11.4 (and older versions, too.)
 - Handle other naming conventions using format strings.

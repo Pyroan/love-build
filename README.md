@@ -18,6 +18,10 @@ Generate a build for Windows
 ```
 $ love-build -w superGame
 ```
+Generate a build for the Web using [love.js](https://github.com/Davidobot/love.js)
+```
+$ love-build -b superGame
+```
 Generate a build for Windows, put it in a separate build directory, give the build a different name, specify the version number, AND delete the `.love` file when done.
 ```
 $ love-build -w -d superGame-builds -o ReallyCoolGame --version=0.1.3 --clean superGame
@@ -29,7 +33,8 @@ $ love-build --clean superGame
 
 ## Build Target support
 - Windows (64-bit)
-- ~~Web (via [love.js](https://github.com/Davidobot/love.js))~~ Coming Soon!
+- Web (via [love.js](https://github.com/Davidobot/love.js))
+    - Runs in compatibility mode by defaul
 
 ## LÖVE Version Support
 - 11.3

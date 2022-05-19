@@ -57,12 +57,12 @@ func main() {
 			return
 		}
 	}
-	// if doWebBuild {
-	// 	if err = makeWebBuild(); err != nil {
-	// 		fmt.Println("Error generating Web build: " + err.Error())
-	// 		return
-	// 	}
-	// }
+	if doWebBuild {
+		if err = makeWebBuild(); err != nil {
+			fmt.Println("Error generating Web build: " + err.Error())
+			return
+		}
+	}
 	if clean {
 		if err = cleanup(); err != nil {
 			fmt.Println("Error during cleanup: " + err.Error())
@@ -202,6 +202,22 @@ func generateLoveFile() error {
 }
 
 func makeWebBuild() error {
+	dirPath := filepath.Join(outputDirectory, outputName+"_web")
+	// go doesn't like to run bash scripts on a windows system, it turns out.
+	// this is how we get the index.js for love.js manually.
+	loveJSIndexPath := filepath.Join(filepath.Dir(loveJSPath), "node_modules", "love.js", "index.js")
+	vPrint("Creating Web build with love.js")
+	cmd := exec.Command("node", loveJSIndexPath, "-c", "-t", outputName, getLoveFileName(), dirPath)
+	err := cmd.Run()
+	if err != nil {
+		return err
+	}
+	// make sure this build now exists
+	_, err = os.Stat(dirPath)
+	if err != nil {
+		return err
+	}
+	vPrint("Finished building for Web")
 	return nil
 }
 
